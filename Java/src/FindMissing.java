@@ -11,7 +11,7 @@ public class FindMissing {
         int n = nums.length;
         while (i < n) {
             int correct = nums[i];
-            if (nums[i] < nums.length && nums[i] != nums[correct]) {
+            if (nums[i] < n && nums[i] != nums[correct]) {
                 int temp = nums[i];
                 nums[i] = nums[correct];
                 nums[correct] = temp;
