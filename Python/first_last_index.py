@@ -2,7 +2,7 @@
 
 def solve(nums, target):
     index = [-1, -1]
-    start, end = 0, len(nums)
+    start, end = 0, len(nums)-1
     while start <= end:
         mid = start + (end - start) // 2
         if nums[mid] >= target:
@@ -17,7 +17,7 @@ def solve(nums, target):
         return index
 
     # resetting start and end (start will be from the index of 1st occurrence)
-    start, end = index[0], len(nums)
+    start, end = index[0], len(nums)-1
 
     while start <= end:
         mid = start + (end - start) // 2
@@ -32,7 +32,7 @@ def solve(nums, target):
 
 def main():
     nums = [1, 2, 3, 4, 4, 4, 4, 5, 6, 6, 7, 7, 7, 8]
-    print(solve(nums, 4))   # [3, 6]
+    print(solve(nums, 9))   # [3, 6]
 
 
 if __name__ == '__main__':
