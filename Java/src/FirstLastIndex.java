@@ -22,7 +22,7 @@ public class FirstLastIndex {
 //      if index[0] is -1, then the element is not found, so no need to search for last index
         if (index[0] == -1) return index;
 
-        start = 0;
+        start = index[0];
         end = nums.length-1;
 
         while (start <= end) {
