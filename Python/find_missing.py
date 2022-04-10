@@ -3,7 +3,6 @@ def solve(nums):
     given an array of integers from 0 to n, find the missing number in the array
     """
     n = len(nums)
-    n = len(nums)
     return n * (n + 1) // 2 - sum(nums)
 
 
